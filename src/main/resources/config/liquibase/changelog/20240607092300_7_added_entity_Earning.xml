@@ -1,0 +1,38 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--Added the entity stock -->
+    <changeSet id="20240607092300-7" author="rkwyu">
+        <createTable tableName="earning">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="period" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="revenue_yoy" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="revenue_yoy_pct" type="decimal(12, 2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eps_yoy" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eps_yoy_pct" type="decimal(12, 2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="source_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_earning_source" references="source(id)"/>
+            </column>
+            <column name="stock_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_earning_stock" references="stock(id)"/>
+            </column>
+            <column name="currency_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_earning_currency" references="currency(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

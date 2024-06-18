@@ -1,0 +1,12 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="classpath:config/liquibase/changelog/20240607092300_1_added_entity_Country.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_2_added_entity_Stock.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_3_added_entity_User.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_4_inserted_entity_User.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_5_added_entity_Source.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_6_added_entity_Currency.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_7_added_entity_Earning.xml" relativeToChangelogFile="false" />
+    <include file="classpath:config/liquibase/changelog/20240607092300_8_added_entity_Analyst.xml" relativeToChangelogFile="false" />
+</databaseChangeLog>

@@ -1,0 +1,13 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--Added the entity stock -->
+    <changeSet id="20240607092300-4" author="rkwyu">
+        <insert tableName="user">
+            <column name="id" value="1" />
+            <column name="name" value="admin" />
+            <column name="password" value="$2a$10$eUb6m7aRKVON2BJ8g4sC7ekElF6lUGqCTUynvq9MTmoZPDSth.CPi" />
+            <column name="role" value="ADMIN" />
+            <column name="active" value="true" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
